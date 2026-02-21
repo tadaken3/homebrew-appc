@@ -5,21 +5,21 @@
 class Appc < Formula
   desc "App Store Connect API CLI tool"
   homepage "https://github.com/tadaken3/appc"
-  version "0.0.2"
+  version "0.0.3"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/tadaken3/appc/releases/download/v0.0.2/appc_darwin_amd64.tar.gz"
-      sha256 "de7e519b5d7646bf469fe9f9812a9988b2c26f53aca4a105a00cdddb36626397"
+      url "https://github.com/tadaken3/appc/releases/download/v0.0.3/appc_darwin_amd64.tar.gz"
+      sha256 "0a5c9a5917db3e08e7d56ee0fada00745fab1a7c6ac9f52a8c3e46b5702b4d0b"
 
       def install
         bin.install "appc"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/tadaken3/appc/releases/download/v0.0.2/appc_darwin_arm64.tar.gz"
-      sha256 "ec3a7d370ed306ef7980b1415d17f836ce62659e8f580dead79c91aa45d365f6"
+      url "https://github.com/tadaken3/appc/releases/download/v0.0.3/appc_darwin_arm64.tar.gz"
+      sha256 "9cbbbefce5e57edbbf725219df0109700b8f2d0d223c6de4ce50a362231798c2"
 
       def install
         bin.install "appc"
@@ -29,15 +29,15 @@ class Appc < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/tadaken3/appc/releases/download/v0.0.2/appc_linux_amd64.tar.gz"
-      sha256 "6a9a3437dd3c5f256c67876a82a7ab6aa77d28634061db84c0a58e335ba1e807"
+      url "https://github.com/tadaken3/appc/releases/download/v0.0.3/appc_linux_amd64.tar.gz"
+      sha256 "3331c67c8b64c4d4dbeaee06c52bd0aa2c6e7fb1be4d10b6bcd2c36ed7b88b54"
       def install
         bin.install "appc"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/tadaken3/appc/releases/download/v0.0.2/appc_linux_arm64.tar.gz"
-      sha256 "64f10f14c929aed1240be47b0a28b74fd22333243e6187c87edfc7b9ede54afc"
+      url "https://github.com/tadaken3/appc/releases/download/v0.0.3/appc_linux_arm64.tar.gz"
+      sha256 "ba93a3d613f23f00d7176c3e24df2f4e084c387273559ae8306f7568b9ad3458"
       def install
         bin.install "appc"
       end
