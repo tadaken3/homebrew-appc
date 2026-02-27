@@ -5,23 +5,23 @@
 class Appc < Formula
   desc "App Store Connect API CLI tool"
   homepage "https://github.com/tadaken3/appc"
-  version "0.0.3"
+  version "0.1.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/tadaken3/appc/releases/download/v0.0.3/appc_darwin_amd64.tar.gz"
-      sha256 "0a5c9a5917db3e08e7d56ee0fada00745fab1a7c6ac9f52a8c3e46b5702b4d0b"
+      url "https://github.com/tadaken3/appc/releases/download/v0.1.0/appc_darwin_amd64.tar.gz"
+      sha256 "36d8d2d4d71c98fc5fc37753c66f0a90f48f899d9f612770fd106ca028fa3f19"
 
-      def install
+      define_method(:install) do
         bin.install "appc"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/tadaken3/appc/releases/download/v0.0.3/appc_darwin_arm64.tar.gz"
-      sha256 "9cbbbefce5e57edbbf725219df0109700b8f2d0d223c6de4ce50a362231798c2"
+      url "https://github.com/tadaken3/appc/releases/download/v0.1.0/appc_darwin_arm64.tar.gz"
+      sha256 "7761ee09497055ea0d79949bb703067924e3bb5b4f811d53461455acda25b56b"
 
-      def install
+      define_method(:install) do
         bin.install "appc"
       end
     end
@@ -29,16 +29,16 @@ class Appc < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/tadaken3/appc/releases/download/v0.0.3/appc_linux_amd64.tar.gz"
-      sha256 "3331c67c8b64c4d4dbeaee06c52bd0aa2c6e7fb1be4d10b6bcd2c36ed7b88b54"
-      def install
+      url "https://github.com/tadaken3/appc/releases/download/v0.1.0/appc_linux_amd64.tar.gz"
+      sha256 "7879095cc86c3b9d801533dff1084fb26c0a11c90009d90c3ebc98d2e19b7e31"
+      define_method(:install) do
         bin.install "appc"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/tadaken3/appc/releases/download/v0.0.3/appc_linux_arm64.tar.gz"
-      sha256 "ba93a3d613f23f00d7176c3e24df2f4e084c387273559ae8306f7568b9ad3458"
-      def install
+      url "https://github.com/tadaken3/appc/releases/download/v0.1.0/appc_linux_arm64.tar.gz"
+      sha256 "63603d6dfe0e90f2fa8030a55ba30dc36da59dfcf1152f86dc1019c13fc872d0"
+      define_method(:install) do
         bin.install "appc"
       end
     end
